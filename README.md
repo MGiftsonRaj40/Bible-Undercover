@@ -1,4 +1,4 @@
-# 🙏 Heavenly Imposter
+# 🙏 Bible Undercover
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
@@ -16,7 +16,7 @@
 
 ## 📖 About
 
-**Heavenly Imposter** is a browser-based multiplayer party game where players receive secret Biblical words. Most players receive the same word, while one or more **Imposters** receive a closely related word. Through discussion and voting, players must identify the imposter before time runs out.
+**Bible Undercover** is a browser-based multiplayer party game where players receive secret Biblical words. Most players receive the same word, while one or more **Imposters** receive a closely related word. Through discussion and voting, players must identify the imposter before time runs out.
 
 Perfect for:
 
@@ -62,7 +62,7 @@ Perfect for:
 ## 📂 Project Structure
 
 ```text
-Heavenly-Imposter/
+Bible-Undercover/
 │
 ├── index.html
 ├── style.css
@@ -180,3 +180,4 @@ If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
 It helps others discover the project and motivates future improvements.
 
 **Have fun and God bless! 🙏**
+
