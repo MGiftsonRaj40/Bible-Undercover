@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavenly Imposter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="app">
+        <!-- ================= SPLASH SCREEN ================= -->
+        <section id="splashScreen" class="screen active">
+            <div class="logo-box">
+                <div class="logo">
+                    🙏
+                </div>
+                <h1>Heavenly Imposter</h1>
+                <p>
+                    A Biblical Party Game
+                </p>
+                <button id="playBtn" class="primary-btn">
+                    PLAY
+                </button>
+            </div>
+        </section>
+        <!-- ================= SETTINGS ================= -->
+        <section id="settingsScreen" class="screen">
+            <div class="card">
+                <h2>Game Settings</h2>
+                <div class="setting">
+                    <label>Players</label>
+                    <input id="playerCount" type="number" min="3" max="20" value="4">
+                </div>
+                <div class="setting">
+                    <label>Imposters</label>
+                    <select id="imposterCount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label>Discussion Time</label>
+                    <select id="discussionTime">
+                        <option value="30">30 Seconds</option>
+                        <option value="60" selected>60 Seconds</option>
+                        <option value="90">90 Seconds</option>
+                        <option value="120">120 Seconds</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label>Difficulty</label>
+                    <select id="difficulty">
+                        <option>Easy</option>
+                        <option selected>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label>Category</label>
+                    <select id="category">
+                        <option>Mixed</option>
+                        <option>People</option>
+                        <option>Places</option>
+                        <option>Objects</option>
+                        <option>Events</option>
+                    </select>
+                </div>
+                <button id="continueBtn" class="primary-btn">
+                    Continue
+                </button>
+            </div>
+        </section>
+        <!-- ================= PLAYER NAMES ================= -->
+        <section id="playersScreen" class="screen">
+            <div class="card">
+                <h2>Player Names</h2>
+                <div id="playerInputs"></div>
+                <button id="startGameBtn" class="primary-btn">
+                    Start Game
+                </button>
+            </div>
+        </section>
+        <!-- ================= PASS PHONE ================= -->
+        <section id="passScreen" class="screen">
+            <div class="card">
+                <h2>Pass the Phone</h2>
+                <h1 id="passPlayerName">
+                    Player
+                </h1>
+                <p>
+                    Make sure no one else is looking.
+                </p>
+                <button id="readyBtn" class="primary-btn">
+                    I'M READY
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= REVEAL ================= -->
+        <section id="revealScreen" class="screen">
+
+            <div class="player-progress">
+                <span id="playerProgress"></span>
+
+                <span id="playerProgressText"></span>
+
+                <div class="overallProgress">
+
+                    <div id="overallProgressFill"></div>
+
+                </div>
+
+            </div>
+
+            <div id="revealCard" class="reveal-card">
+
+                <div class="card-inner">
+
+                    <div class="card-front">
+
+                        <div class="eye">👁️</div>
+
+                        <h2>Press & Hold</h2>
+
+                        <p>Hold to reveal your secret word</p>
+
+                        <div id="progressBar">
+                            <div id="progressFill"></div>
+                        </div>
+
+                        <div id="viewedBadge" class="hidden">
+                            ✅ Word Viewed
+                        </div>
+
+                    </div>
+
+                    <div class="card-back">
+
+                        <small>Your Secret Word</small>
+
+                        <h1 id="secretWord"></h1>
+
+                        <p>Release to hide</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button id="nextPlayerBtn" class="primary-btn">
+                Next Player
+            </button>
+
+        </section>
+
+        <!-- ================= DISCUSSION ================= -->
+        <section id="discussionScreen" class="screen">
+            <div class="card">
+                <h2>Discussion Time</h2>
+                <div id="timer">
+                    01:00
+                </div>
+                <button id="startDiscussionBtn" class="primary-btn">
+                    Start
+                </button>
+                <button id="endGameBtn" class="secondary-btn">
+                    End Game
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= VOTING ================= -->
+        <section id="voteScreen" class="screen">
+            <div class="card">
+                <h2 id="voteTitle">
+                    Vote the Imposter
+                </h2>
+                <div id="voteList">
+                </div>
+                <button id="finishVotingBtn" class="primary-btn">
+                    Reveal
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= RESULT ================= -->
+        <section id="resultScreen" class="screen">
+            <div class="card">
+                <h2>Round Result</h2>
+
+                <h1 id="winnerTitle"></h1>
+
+                <div id="scoreBoard">
+
+                    <div class="scoreBox">
+
+                        <h3>Players</h3>
+
+                        <span id="playersScore">0</span>
+
+                    </div>
+
+                    <div class="scoreBox">
+
+                        <h3>Imposters</h3>
+
+                        <span id="imposterScore">0</span>
+
+                    </div>
+
+                </div>
+
+                <div id="resultDetails"></div>
+
+                <div class="button-group">
+
+                    <button id="nextRoundBtn" class="primary-btn">
+
+                        Next Round
+
+                    </button>
+
+                    <button id="playAgainBtn" class="primary-btn">
+
+                        New Game
+
+                    </button>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
