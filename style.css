@@ -113,7 +113,6 @@ SCREENS
     animation: fade .35s ease;
     max-height: calc(100vh - 40px);
     max-height: calc(100dvh - 40px);
-    overflow-y: auto;
     scrollbar-width: thin;
 }
 
@@ -177,10 +176,8 @@ LOGO
     margin: auto;
     margin-bottom: 25px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
+    display: block;
+    object-fit: cover;
     background: rgba(255, 255, 255, .08);
     border: 2px solid rgba(255, 255, 255, .1);
     box-shadow: var(--shadow);
@@ -901,7 +898,6 @@ RESPONSIVE
     .logo {
         width: 95px;
         height: 95px;
-        font-size: 48px;
     }
 
     h1 {
